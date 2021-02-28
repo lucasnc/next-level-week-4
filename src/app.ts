@@ -1,7 +1,10 @@
+import { createConnection } from 'typeorm';
 import 'reflect-metadata';
-import express, { response } from 'express';
+import express from 'express';
 import './database';
 import { router } from './routes';
+
+createConnection();
 
 const app = express();
 
